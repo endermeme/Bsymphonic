@@ -17,7 +17,20 @@ command -v curl >/dev/null 2>&1 || { echo "[ERROR] curl khong co trong PATH."; e
 command -v bsdtar >/dev/null 2>&1 || { echo "[ERROR] bsdtar khong co trong PATH."; exit 1; }
 
 echo "[1/5] Build fat jar va wrapper .exe..."
-export MAVEN_OPTS="--add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang.reflect=ALL-UNNAMED --add-opens java.base/java.text=ALL-UNNAMED --add-opens java.desktop/java.awt.font=ALL-UNNAMED"
+JAVA_VERSION_OUTPUT="$(java -version 2>&1 | head -n 1)"
+JAVA_VERSION="$(printf '%s\n' "$JAVA_VERSION_OUTPUT" | sed -E 's/.*version "([^"]+)".*/\1/')"
+JAVA_MAJOR="$(printf '%s\n' "$JAVA_VERSION" | awk -F. '{if ($1 == "1") print $2; else print $1}')"
+
+if [[ -z "${JAVA_MAJOR:-}" ]]; then
+  echo "[ERROR] Khong xac dinh duoc phien ban Java dang chay cung Maven."
+  exit 1
+fi
+
+if (( JAVA_MAJOR >= 9 )); then
+  export MAVEN_OPTS="--add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang.reflect=ALL-UNNAMED --add-opens java.base/java.text=ALL-UNNAMED --add-opens java.desktop/java.awt.font=ALL-UNNAMED"
+else
+  unset MAVEN_OPTS || true
+fi
 mvn -B -DskipTests verify
 
 rm -rf "$WORK_DIR"

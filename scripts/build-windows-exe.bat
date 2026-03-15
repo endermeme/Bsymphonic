@@ -22,7 +22,26 @@ if not exist "%JAVA8_RUNTIME_HOME%\bin\javaw.exe" (
 )
 
 echo [1/4] Build fat jar va wrapper .exe...
-set "MAVEN_OPTS=--add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang.reflect=ALL-UNNAMED --add-opens java.base/java.text=ALL-UNNAMED --add-opens java.desktop/java.awt.font=ALL-UNNAMED"
+set "JAVA_MAJOR="
+for /f "tokens=3 delims=.\" %%A in ('java -version 2^>^&1 ^| findstr /i "version"') do (
+  if "%%A"=="1" (
+    for /f "tokens=4 delims=.\"" %%B in ('java -version 2^>^&1 ^| findstr /i "version"') do (
+      set "JAVA_MAJOR=%%B"
+    )
+  ) else (
+    set "JAVA_MAJOR=%%A"
+  )
+)
+
+if not defined JAVA_MAJOR (
+  echo [ERROR] Khong xac dinh duoc phien ban Java dang chay cung Maven.
+  exit /b 1
+)
+
+set "MAVEN_OPTS="
+if !JAVA_MAJOR! GEQ 9 (
+  set "MAVEN_OPTS=--add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang.reflect=ALL-UNNAMED --add-opens java.base/java.text=ALL-UNNAMED --add-opens java.desktop/java.awt.font=ALL-UNNAMED"
+)
 call mvn -DskipTests verify
 if errorlevel 1 (
   echo [ERROR] Maven build that bai.

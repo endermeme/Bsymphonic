@@ -1,98 +1,100 @@
-# Binh Tagilla JSymphonic Revival
 
-## Muc dich
+## Mục đích
 
-Day la ban tuy bien tu du an JSymphonic Revival de dung cho nhu cau dong goi va su dung tren Windows voi giao dien mac dinh tieng Viet.
+Đây là bản tuỳ biến từ dự án JSymphonic Revival mình code lại thay cho Sonic Stage lỗi thời và dễ crash
+Là chút lòng thành gửi ae trong nhóm Hội người nghiện MP3 - CD- sony walkman- Tai Nghe & Máy Nghe Nhạc vì đã trả lời các câu hỏi của em :D
+Cảm ơn bác "Bố Yuki" đã giúp em nhớ ra dự án này và làm sau 1 tháng e quên :))) 
 
-Ung dung nay la trinh quan ly nhac cho Sony Walkman. Chuc nang chinh:
 
-- Nhap nhac tu may tinh vao Walkman
-- Xuat nhac tu Walkman ra may tinh
-- Xoa nhac tren Walkman
-- Mount va unmount thiet bi trong JSymphonic
-- Tao lai co so du lieu nhac tren thiet bi
-- Transcode mot so dinh dang qua `ffmpeg.exe` khi can
+Ứng dụng này là trình quản lý nhạc cho Sony Walkman. Chức năng chính:
 
-## Nhung gi da duoc sua trong ban nay
+- Nhập nhạc từ máy tính vào Walkman
+- Xuất nhạc từ Walkman ra máy tính
+- Xoá nhạc trên Walkman
+- Mount và unmount thiết bị trong JSymphonic
+- Tạo lại cơ sở dữ liệu nhạc trên thiết bị
+- Transcode một số định dạng qua `ffmpeg.exe` khi cần
 
-- Dat ngon ngu mac dinh la `Tieng Viet` cho cau hinh moi
-- Them bo localization `vi_VN` cho cac nhom text giao dien chinh
-- Doi ten hien thi cua app thanh `Binh Tagilla JSymphonic Revival v0.5.3`
-- Them popup chao mung chi hien 1 lan o lan chay dau
-- Popup lan dau co credit ban sua boi Binh Tagilla, link profile va link repo revival hien tai
-- Cai thien man hinh cau hinh lan dau, them huong dan ro hon o muc chon thu muc thiet bi
-- Them cach build `.exe` Windows theo huong portable, co the bundle san Java 8 runtime de may dich khong can cai Java
+## Những gì đã được sửa trong bản này
+
+- Đặt ngôn ngữ mặc định là `Tiếng Việt` cho cấu hình mới
+- Thêm bộ localization `vi_VN` cho các nhóm text giao diện chính
+- Đổi tên hiển thị của app thành `Binh Tagilla JSymphonic Revival v0.5.3`
+- Thêm popup chào mừng chỉ hiện 1 lần ở lần chạy đầu
+- Popup lần đầu có credit bản sửa bởi Binh Tagilla, link profile và link repo revival hiện tại
+- Cải thiện màn hình cấu hình lần đầu, thêm hướng dẫn rõ hơn ở mục chọn thư mục thiết bị
+- Thêm cách build `.exe` Windows theo hướng portable, có thể bundle sẵn Java 8 runtime để máy đích không cần cài Java
 
 ## Credit
 
-Ban tuy bien:
+Bản tuỳ biến:
 
 - Binh Tagilla
 - Profile: https://binhtagilla.id.vn
 
-Tac gia goc va nguon tham khao:
+Tác giả gốc và nguồn tham khảo:
 
-- JSymphonic goc: Patrick Balleux, Nicolas Cardoso De Castro, Daniel Zalar
-- Repo revival dang dung lam nen: https://github.com/georgewoodall82/jsymphonic
+- JSymphonic gốc: Patrick Balleux, Nicolas Cardoso De Castro, Daniel Zalar
+- Repo revival đang dùng làm nền: https://github.com/georgewoodall82/jsymphonic
 
-## Cach chay app
+## Cách chạy app
 
-Neu chi chay bang jar:
+Nếu chỉ chạy bằng jar:
 
-1. Can Java 8 hoac moi hon
-2. Chay:
+1. Cần Java 8 hoặc mới hơn
+2. Chạy:
 
 ```bash
 java -jar target/jsymphonic-0.5.3-jar-with-dependencies.jar
 ```
 
-Neu dung goi Windows portable da bundle san runtime:
+Nếu dùng gói Windows portable đã bundle sẵn runtime:
 
-1. Mo thu muc build ra
-2. Bam `BinhTagilla-JSymphonic.exe`
-3. Khong can cai Java tren may dich neu runtime da duoc bundle san
+1. Mở thư mục build ra
+2. Bấm `BinhTagilla-JSymphonic.exe`
+3. Không cần cài Java trên máy đích nếu runtime đã được bundle sẵn
 
-## Cau hinh lan dau
+## Cấu hình lần đầu
 
-Khi app mo lan dau, se co man hinh cau hinh thiet bi.
+Khi app mở lần đầu, sẽ có màn hình cấu hình thiết bị.
 
-Ban can:
+Bạn cần:
 
-1. Bam nut chon thu muc
-2. Chon thu muc goc cua Walkman
-3. Thu muc nay nen chua `OMGAUDIO` hoac `ESYS`
-4. Chon dung doi may trong danh sach
-5. Bam `Ap dung`
+1. Bấm nút chọn thư mục
+2. Chọn thư mục gốc của Walkman
+3. Thư mục này nên chứa `OMGAUDIO` hoặc `ESYS`
+4. Chọn đúng đời máy trong danh sách
+5. Bấm `Áp dụng`
 
-Neu dat sai duong dan thiet bi, app van mo duoc nhung se khong mount dung noi dung cua may nghe.
+Nếu đặt sai đường dẫn thiết bị, app vẫn mở được nhưng sẽ không mount đúng nội dung của máy nghe.
 
 ## Build source
 
-Lenh build jar:
+Lệnh build jar:
 
 ```bash
 mvn package
 ```
 
-Ket qua:
+Kết quả:
 
 - `target/jsymphonic-0.5.3-jar-with-dependencies.jar`
 
 ## Build Windows EXE portable
 
-Neu build tren Linux, nhat la Arch:
+Nếu build trên Linux, nhất là Arch:
 
 ```bash
 ./scripts/build-windows-exe.sh
 ```
 
-Script Linux se:
+Script Linux sẽ:
 
 1. Build `.exe` wrapper
-2. Tu dong tai JRE Windows 8 tu Adoptium
-3. Nhung san JRE vao goi portable
+2. Tự động tải JRE Windows 8 từ Adoptium
+3. Nhúng sẵn JRE vào gói portable
 
-Neu build tren Windows:
+Nếu build trên Windows:
 
 Script build:
 
@@ -100,74 +102,74 @@ Script build:
 scripts\build-windows-exe.bat
 ```
 
-Script nay se:
+Script này sẽ:
 
 1. Build fat jar
-2. Tao `.exe` wrapper cho Windows
-3. Copy Java 8 runtime vao cung goi portable
-4. Tao thu muc output o:
+2. Tạo `.exe` wrapper cho Windows
+3. Copy Java 8 runtime vào cùng gói portable
+4. Tạo thư mục output ở:
 
 ```text
 build\windows-portable\BinhTagilla-JSymphonic\
 ```
 
-Trong thu muc output se co:
+Trong thư mục output sẽ có:
 
 - `BinhTagilla-JSymphonic.exe`
 - `jsymphonic.jar`
-- thu muc `jre`
-- tuy chon `ffmpeg.exe` neu ban tu cung cap luc build
+- thư mục `jre`
+- tuỳ chọn `ffmpeg.exe` nếu bạn tự cung cấp lúc build
 
-## Yeu cau tren may build
+## Yêu cầu trên máy build
 
-Can co:
+Cần có:
 
 1. `mvn` trong `PATH`
-2. Bien moi truong `JAVA8_RUNTIME_HOME` tro den JRE/JDK 8
+2. Biến môi trường `JAVA8_RUNTIME_HOME` trỏ đến JRE/JDK 8
 
-Vi du:
+Ví dụ:
 
 ```bat
 set JAVA8_RUNTIME_HOME=C:\Java\jre8
 scripts\build-windows-exe.bat
 ```
 
-Neu muon copy them `ffmpeg.exe` vao goi portable ngay luc build:
+Nếu muốn copy thêm `ffmpeg.exe` vào gói portable ngay lúc build:
 
 ```bat
 set FFMPEG_EXE=C:\ffmpeg\bin\ffmpeg.exe
 scripts\build-windows-exe.bat
 ```
 
-## May dich co can cai gi khong
+## Máy đích có cần cài gì không
 
-Neu goi portable da co san thu muc `jre`:
+Nếu gói portable đã có sẵn thư mục `jre`:
 
-- Khong can cai Java
-- Co the bam mo `BinhTagilla-JSymphonic.exe` truc tiep
-- Ban build Linux da duoc chinh de tu tai va nhung san JRE Windows vao goi
+- Không cần cài Java
+- Có thể bấm mở `BinhTagilla-JSymphonic.exe` trực tiếp
+- Bản build Linux đã được chỉnh để tự tải và nhúng sẵn JRE Windows vào gói
 
-Neu muon transcode cac dinh dang khong duoc may ho tro san:
+Nếu muốn transcode các định dạng không được máy hỗ trợ sẵn:
 
-- Can `ffmpeg.exe`
-- Neu khong co `ffmpeg.exe`, app van mo va van dung duoc cac chuc nang khong can transcode
+- Cần `ffmpeg.exe`
+- Nếu không có `ffmpeg.exe`, app vẫn mở và vẫn dùng được các chức năng không cần transcode
 
-## Gioi han tuong thich Windows
+## Giới hạn tương thích Windows
 
-Phan nay can noi ro:
+Phần này cần nói rõ:
 
-- Muc tieu thuc te nen xem la Windows 7 toi Windows 11
-- Windows XP chi la muc best-effort
-- Khong the cam ket chac chan mot goi duy nhat se on dinh tren moi may XP toi 11
+- Mục tiêu thực tế nên xem là Windows 7 tới Windows 11
+- Windows XP chỉ là mức best-effort
+- Không thể cam kết chắc chắn một gói duy nhất sẽ ổn định trên mọi máy từ XP tới 11
 
-Ly do:
+Lý do:
 
 - Java
 - wrapper `.exe`
 - driver USB
-- hanh vi he thong file tren Windows cu
+- hành vi hệ thống file trên Windows cũ
 
-## File da sua trong ban nay
+## File đã sửa trong bản này
 
 - `pom.xml`
 - `scripts/build-windows-exe.bat`
@@ -176,8 +178,8 @@ Ly do:
 - `src/main/java/org/danizmax/jsymphonic/gui/JSymphonicFirstConfig.java`
 - `src/main/resources/localization/*.properties`
 
-## Ghi chu kiem tra
+## Ghi chú kiểm tra
 
-Moi truong hien tai khong co `mvn`, nen chua build verify duoc artifact that su trong may dang sua.
+Môi trường hiện tại không có `mvn`, nên chưa build verify được artifact thực sự trên máy đang sửa.
 
-Nhung da kiem tra tinh nhat quan key localization va da chuan bi du day script, config va tai lieu de build tren Windows.
+Nhưng đã kiểm tra tính nhất quán key localization và đã chuẩn bị đầy đủ script, config và tài liệu để build trên Windows.

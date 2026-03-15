@@ -1,9 +1,8 @@
 
 ## Mục đích
-
-Đây là bản tuỳ biến từ dự án JSymphonic Revival mình code lại thay cho Sonic Stage lỗi thời và dễ crash
-Là chút lòng thành gửi ae trong nhóm Hội người nghiện MP3 - CD- sony walkman- Tai Nghe & Máy Nghe Nhạc vì đã trả lời các câu hỏi của em :D
-Cảm ơn bác "Bố Yuki" đã giúp em nhớ ra dự án này và làm sau 1 tháng e quên :))) 
+- Đây là bản tuỳ biến từ dự án JSymphonic Revival mình code lại thay cho Sonic Stage lỗi thời và dễ crash
+- Là chút lòng thành gửi ae trong nhóm Hội người nghiện MP3 - CD- sony walkman- Tai Nghe & Máy Nghe Nhạc vì đã trả lời các câu hỏi của em :D
+- Cảm ơn bác "Bố Yuki" đã giúp em nhớ ra dự án này và làm sau 1 tháng e quên :))) 
 
 
 Ứng dụng này là trình quản lý nhạc cho Sony Walkman. Chức năng chính:

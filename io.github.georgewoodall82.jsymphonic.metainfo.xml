@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.georgewoodall82.jsymphonic</id>
+  
+  <name>JSymphonic Revival</name>
+  <summary>A Manager for Sony digital players</summary>
+
+  <developer id="io.github.georgewoodall82">
+    <name>georgewoodall82</name>
+  </developer>
+  
+  <metadata_license>FSFAP</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  
+  <description>
+    <p>
+      A portable MP3/WMA/OGG/FLAC file manager for Sony players. Simply copy it on your usb player and use it wherever you are! It is an alternative to SonicStage. (Was NW-E00x Mp3 File Manager...)
+
+      This is a fork of the original JSymphonic to use more modern libraries
+    </p>
+  </description>
+
+  <url type="homepage">https://github.com/georgewoodall82/jsymphonic</url>
+
+  <content_rating type="oars-1.1" />
+
+  <branding>
+    <color type="primary" scheme_preference="light">#ff6e00</color>
+    <color type="primary" scheme_preference="dark">#666666</color>
+  </branding>
+
+  <releases>
+    <release version="0.5.3" date="2024-07-16">
+    </release>
+    <release version="0.5.2" date="2024-07-15">
+    </release>
+    <release version="0.5.1" date="2024-07-15">
+    </release>
+    <release version="0.5.0" date="2024-07-14">
+    </release>
+    <release version="0.4.2" date="2024-07-14">
+    </release>
+  </releases>
+  
+  <launchable type="desktop-id">io.github.georgewoodall82.jsymphonic.desktop</launchable>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/georgewoodall82/jsymphonic/main/screenshots/mainwindow.png</image>
+      <caption>JSymphonic Main Page</caption>
+    </screenshot>
+  </screenshots>
+</component>

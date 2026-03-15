@@ -1,0 +1,15 @@
+# Compiled class file
+*.class
+target/
+build/
+/jsymphonic.jar
+*.log
+
+# Package Files #
+#*.jar
+
+.classpath
+.project
+.settings
+JSymphonic.xml
+.vscode

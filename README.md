@@ -14,16 +14,8 @@ Cảm ơn bác "Bố Yuki" đã giúp em nhớ ra dự án này và làm sau 1 t
 - Mount và unmount thiết bị trong JSymphonic
 - Tạo lại cơ sở dữ liệu nhạc trên thiết bị
 - Transcode một số định dạng qua `ffmpeg.exe` khi cần
+- Hỗ trợ từ win 7 tới 11 và có cả linux để thay thế sonic stage 
 
-## Những gì đã được sửa trong bản này
-
-- Đặt ngôn ngữ mặc định là `Tiếng Việt` cho cấu hình mới
-- Thêm bộ localization `vi_VN` cho các nhóm text giao diện chính
-- Đổi tên hiển thị của app thành `Binh Tagilla JSymphonic Revival v0.5.3`
-- Thêm popup chào mừng chỉ hiện 1 lần ở lần chạy đầu
-- Popup lần đầu có credit bản sửa bởi Binh Tagilla, link profile và link repo revival hiện tại
-- Cải thiện màn hình cấu hình lần đầu, thêm hướng dẫn rõ hơn ở mục chọn thư mục thiết bị
-- Thêm cách build `.exe` Windows theo hướng portable, có thể bundle sẵn Java 8 runtime để máy đích không cần cài Java
 
 ## Credit
 
@@ -154,32 +146,4 @@ Nếu muốn transcode các định dạng không được máy hỗ trợ sẵn
 - Cần `ffmpeg.exe`
 - Nếu không có `ffmpeg.exe`, app vẫn mở và vẫn dùng được các chức năng không cần transcode
 
-## Giới hạn tương thích Windows
 
-Phần này cần nói rõ:
-
-- Mục tiêu thực tế nên xem là Windows 7 tới Windows 11
-- Windows XP chỉ là mức best-effort
-- Không thể cam kết chắc chắn một gói duy nhất sẽ ổn định trên mọi máy từ XP tới 11
-
-Lý do:
-
-- Java
-- wrapper `.exe`
-- driver USB
-- hành vi hệ thống file trên Windows cũ
-
-## File đã sửa trong bản này
-
-- `pom.xml`
-- `scripts/build-windows-exe.bat`
-- `src/main/java/org/danizmax/jsymphonic/gui/SettingsHandler.java`
-- `src/main/java/org/danizmax/jsymphonic/gui/JSymphonicWindow.java`
-- `src/main/java/org/danizmax/jsymphonic/gui/JSymphonicFirstConfig.java`
-- `src/main/resources/localization/*.properties`
-
-## Ghi chú kiểm tra
-
-Môi trường hiện tại không có `mvn`, nên chưa build verify được artifact thực sự trên máy đang sửa.
-
-Nhưng đã kiểm tra tính nhất quán key localization và đã chuẩn bị đầy đủ script, config và tài liệu để build trên Windows.

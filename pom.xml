@@ -85,10 +85,10 @@
 						</goals>
 						<configuration>
 							<headerType>gui</headerType>
-							<outfile>${project.build.directory}/windows-portable/BinhTagilla-JSymphonic.exe</outfile>
+							<outfile>${project.build.directory}/windows-portable/BSymphonic.exe</outfile>
 							<jar>jsymphonic.jar</jar>
 							<icon>${project.basedir}/build-resources/windows/app-icon.ico</icon>
-							<errTitle>Binh Tagilla JSymphonic Revival</errTitle>
+							<errTitle>JSymphonic JSymphonic Revival</errTitle>
 							<classPath>
 								<mainClass>org.danizmax.jsymphonic.gui.JSymphonic</mainClass>
 							</classPath>
@@ -102,14 +102,14 @@
 							<versionInfo>
 								<fileVersion>0.5.3.0</fileVersion>
 								<txtFileVersion>0.5.3</txtFileVersion>
-								<fileDescription>Binh Tagilla JSymphonic Revival</fileDescription>
+								<fileDescription>JSymphonic JSymphonic Revival</fileDescription>
 								<copyright>Original authors and revival contributors</copyright>
 								<productVersion>0.5.3.0</productVersion>
 								<txtProductVersion>0.5.3</txtProductVersion>
-								<productName>Binh Tagilla JSymphonic Revival</productName>
-								<companyName>Binh Tagilla</companyName>
-								<internalName>BinhTagilla-JSymphonic</internalName>
-								<originalFilename>BinhTagilla-JSymphonic.exe</originalFilename>
+								<productName>JSymphonic JSymphonic Revival</productName>
+								<companyName>JSymphonic</companyName>
+								<internalName>BSymphonic</internalName>
+								<originalFilename>BSymphonic.exe</originalFilename>
 							</versionInfo>
 						</configuration>
 					</execution>

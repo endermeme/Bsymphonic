@@ -6,7 +6,7 @@ cd "$ROOT_DIR"
 
 JRE_URL="${JRE_URL:-https://api.adoptium.net/v3/binary/latest/8/ga/windows/x86/jre/hotspot/normal/eclipse}"
 WORK_DIR="$ROOT_DIR/build/windows-portable"
-DIST_DIR="$WORK_DIR/BinhTagilla-JSymphonic"
+DIST_DIR="$WORK_DIR/BSymphonic"
 RUNTIME_DIR="$DIST_DIR/jre"
 CACHE_DIR="$WORK_DIR/cache"
 JRE_ARCHIVE="$CACHE_DIR/windows-jre8.zip"
@@ -37,7 +37,7 @@ rm -rf "$WORK_DIR"
 mkdir -p "$DIST_DIR" "$CACHE_DIR" "$JRE_EXTRACT_DIR"
 
 echo "[2/5] Copy file app..."
-cp target/windows-portable/BinhTagilla-JSymphonic.exe "$DIST_DIR/"
+cp target/windows-portable/BSymphonic.exe "$DIST_DIR/"
 cp target/windows-portable/jsymphonic.jar "$DIST_DIR/"
 
 echo "[3/5] Lay JRE Windows 8 tu Adoptium..."

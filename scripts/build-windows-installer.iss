@@ -1,10 +1,10 @@
-#define MyAppName "BinhTagilla JSymphonic Revival"
-#define MyAppExeName "BinhTagilla-JSymphonic.exe"
-#define MyAppDirName "BinhTagilla-JSymphonic"
+#define MyAppName "BSymphonic"
+#define MyAppExeName "BSymphonic.exe"
+#define MyAppDirName "BSymphonic"
 #define MyAppVersion "1.0"
-#define MyAppPublisher "Binh Tagilla"
-#define MyAppURL "https://binhtagilla.id.vn"
-#define MySourceDir "..\\build\\windows-portable\\BinhTagilla-JSymphonic"
+#define MyAppPublisher "JSymphonic"
+#define MyAppURL "https://github.com"
+#define MySourceDir "..\\build\\windows-portable\\BSymphonic"
 #define MyIconFile "..\\build-resources\\windows\\app-icon.ico"
 
 [Setup]
@@ -34,10 +34,10 @@ UninstallDisplayIcon={app}\{#MyAppExeName}
 WizardResizable=no
 
 [Languages]
-Name: "vietnamese"; MessagesFile: "compiler:Languages\Vietnamese.isl"
+Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Tasks]
-Name: "desktopicon"; Description: "Tạo biểu tượng ngoài màn hình chính"; GroupDescription: "Tùy chọn thêm:"
+Name: "desktopicon"; Description: "Tao icon tren desktop"; GroupDescription: "Tuy chon them:"
 
 [Files]
 Source: "{#MySourceDir}\*"; DestDir: "{app}"; Flags: recursesubdirs ignoreversion
@@ -50,10 +50,10 @@ Name: "{autodesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: de
 Filename: "{app}\{#MyAppExeName}"; Description: "Mở {#MyAppName} ngay"; Flags: nowait postinstall skipifsilent
 
 [CustomMessages]
-vietnamese.WelcomeLabel1=Trình cài đặt sẽ hướng dẫn bạn cài BinhTagilla JSymphonic Revival vào máy tính.
-vietnamese.WelcomeLabel2=Bạn có thể chọn thư mục cài đặt, tạo biểu tượng ngoài màn hình chính và mở ứng dụng ngay sau khi cài xong.
-vietnamese.SelectDirLabel3=Chọn thư mục muốn cài ứng dụng rồi bấm Tiếp tục.
-vietnamese.SelectDirBrowseLabel=Thư mục cài đặt:
-vietnamese.ReadyLabel1=Trình cài đặt đã sẵn sàng để chép ứng dụng vào máy.
-vietnamese.FinishedHeadingLabel=Đã cài đặt xong BinhTagilla JSymphonic Revival
-vietnamese.FinishedLabel=Ứng dụng đã được cài xong trên máy này.
+english.WelcomeLabel1=Trình cài đặt sẽ hướng dẫn bạn cài BSymphonic vào máy tính.
+english.WelcomeLabel2=Bạn có thể chọn thư mục cài đặt, tạo biểu tượng ngoài màn hình chính và mở ứng dụng ngay sau khi cài xong.
+english.SelectDirLabel3=Chọn thư mục muốn cài ứng dụng rồi bấm Tiếp tục.
+english.SelectDirBrowseLabel=Thư mục cài đặt:
+english.ReadyLabel1=Trình cài đặt đã sẵn sàng để chép ứng dụng vào máy.
+english.FinishedHeadingLabel=Đã cài đặt xong BSymphonic
+english.FinishedLabel=Ứng dụng đã được cài xong trên máy này.

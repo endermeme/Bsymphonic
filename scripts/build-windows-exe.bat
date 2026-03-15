@@ -49,14 +49,14 @@ if errorlevel 1 (
 )
 
 set "WORK_DIR=build\windows-portable"
-set "DIST_DIR=%WORK_DIR%\BinhTagilla-JSymphonic"
+set "DIST_DIR=%WORK_DIR%\BSymphonic"
 set "RUNTIME_DIR=%DIST_DIR%\jre"
 
 if exist "%WORK_DIR%" rmdir /s /q "%WORK_DIR%"
 mkdir "%DIST_DIR%"
 mkdir "%RUNTIME_DIR%"
 
-if not exist "target\windows-portable\BinhTagilla-JSymphonic.exe" (
+if not exist "target\windows-portable\BSymphonic.exe" (
   echo [ERROR] Khong tim thay file exe wrapper do Launch4j tao ra.
   exit /b 1
 )
@@ -67,7 +67,7 @@ if not exist "target\windows-portable\jsymphonic.jar" (
 )
 
 echo [2/4] Copy file app...
-copy /Y "target\windows-portable\BinhTagilla-JSymphonic.exe" "%DIST_DIR%\BinhTagilla-JSymphonic.exe" >NUL
+copy /Y "target\windows-portable\BSymphonic.exe" "%DIST_DIR%\BSymphonic.exe" >NUL
 copy /Y "target\windows-portable\jsymphonic.jar" "%DIST_DIR%\jsymphonic.jar" >NUL
 
 echo [3/4] Bundle Java 8 runtime...

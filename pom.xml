@@ -87,6 +87,7 @@
 							<headerType>gui</headerType>
 							<outfile>${project.build.directory}/windows-portable/BinhTagilla-JSymphonic.exe</outfile>
 							<jar>jsymphonic.jar</jar>
+							<icon>${project.basedir}/build-resources/windows/app-icon.ico</icon>
 							<errTitle>Binh Tagilla JSymphonic Revival</errTitle>
 							<classPath>
 								<mainClass>org.danizmax.jsymphonic.gui.JSymphonic</mainClass>

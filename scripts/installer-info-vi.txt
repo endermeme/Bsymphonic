@@ -1,0 +1,10 @@
+Bộ cài này sẽ cài BinhTagilla JSymphonic Revival với Java runtime đi kèm.
+
+Lưu ý:
+- Sau khi cài xong, bạn có thể mở ứng dụng trực tiếp từ biểu tượng trên màn hình chính hoặc menu Start.
+- Không cần cài Java riêng trên máy đích.
+- Nếu muốn dùng tính năng chuyển đổi định dạng âm thanh nâng cao, bạn vẫn có thể chép thêm ffmpeg.exe vào thư mục cài đặt sau này.
+
+Khuyến nghị:
+- Giữ nguyên thư mục cài mặc định nếu bạn không có lý do đặc biệt để đổi.
+- Nếu Windows hỏi quyền tạo shortcut hoặc ghi file, hãy cho phép để bộ cài hoàn tất đúng cách.

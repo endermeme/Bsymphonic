@@ -40,11 +40,11 @@ Nếu chỉ chạy bằng jar:
 java -jar target/jsymphonic-0.5.3-jar-with-dependencies.jar
 ```
 
-Nếu dùng gói Windows portable đã bundle sẵn runtime:
+Nếu dùng bản Windows portable:
 
-1. Mở thư mục build ra
+1. Giữ nguyên cả thư mục portable
 2. Bấm `BinhTagilla-JSymphonic.exe`
-3. Không cần cài Java trên máy đích nếu runtime đã được bundle sẵn
+3. Không cần cài Java nếu thư mục `jre` nằm cạnh file exe
 
 ## Cấu hình lần đầu
 
@@ -112,6 +112,28 @@ Trong thư mục output sẽ có:
 - thư mục `jre`
 - tuỳ chọn `ffmpeg.exe` nếu bạn tự cung cấp lúc build
 
+Portable vẫn được dùng làm đầu vào cho bộ cài Windows.
+
+## Build Windows installer
+
+Nếu build trên Windows:
+
+```bat
+scripts\build-windows-installer.bat
+```
+
+Kết quả:
+
+- `build\windows-installer\BinhTagilla-JSymphonic-Setup.exe`
+
+Bộ cài này có:
+
+- giao diện cài đặt chuẩn
+- chọn thư mục cài đặt
+- tiếng Việt
+- tùy chọn tạo biểu tượng ngoài màn hình chính
+- mở app ngay sau khi cài xong
+
 ## Yêu cầu trên máy build
 
 Cần có:
@@ -145,5 +167,3 @@ Nếu muốn transcode các định dạng không được máy hỗ trợ sẵn
 
 - Cần `ffmpeg.exe`
 - Nếu không có `ffmpeg.exe`, app vẫn mở và vẫn dùng được các chức năng không cần transcode
-
-
